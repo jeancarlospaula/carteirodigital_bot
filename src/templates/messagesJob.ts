@@ -44,7 +44,7 @@ const orderDelivered = ({
 *DATA DA ATUALIZAÇÃO*: ${moment(dateUpdate).format(
   'DD/MM/YYYY'
 )} - ${timeUpdate}\n\n
-*Se quiser começar a rastrear um nova encomenda, é só digital o código dela aqui embaixo! 📫*`
+*Se quiser começar a rastrear um nova encomenda, é só digitar o código dela aqui embaixo! 📫*`
 
 const orderDelivery = ({
   trackingCode,

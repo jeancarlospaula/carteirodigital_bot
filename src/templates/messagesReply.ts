@@ -6,12 +6,12 @@ const welcome = (firstName: string) =>
 
 const firstCode = (firstName: string) =>
   `Então, vamos lá ${firstName}.\n\n
-Para rastrear sua encomenda é só digital o código dela, ok? Lembre-se de digital um código *válido para os correios do Brasil*.\n\n
+Para rastrear sua encomenda é só digitar o código dela, ok? Lembre-se de digitar um código *válido para os correios do Brasil*.\n\n
 ⚠️ *Se a qualquer momento você quiser que eu pare de te enviar notificações e delete seu nome e códigos de rastreio dos meus registros, é só digitar /quit, beleza?*`
 
 const invalidCode = (code: string, firstName: string) =>
   `O código *${code}* não parece ser válido, ${firstName} ☹️\n
-Vamos tentar rastrear sua encomenda novamente? Lembre-se de digital um código *válido para os correios do Brasil*.`
+Vamos tentar rastrear sua encomenda novamente? Lembre-se de digitar um código *válido para os correios do Brasil*.`
 
 const lastUpdate = ({
   trackingCode,
@@ -76,7 +76,7 @@ const orderDelivered = ({
 *DATA DA ATUALIZAÇÃO*: ${moment(dateUpdate).format(
   'DD/MM/YYYY'
 )} - ${timeUpdate}\n\n
-*Se quiser começar a rastrear um nova encomenda, é só digital o código dela aqui embaixo! 📫*`
+*Se quiser começar a rastrear um nova encomenda, é só digitar o código dela aqui embaixo! 📫*`
 
 const orderPosted = ({
   trackingCode,
