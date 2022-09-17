@@ -1,0 +1,25 @@
+import { Schema, model } from 'mongoose'
+
+export interface ITrackedOrdersNumber extends Document {
+  number: number
+}
+
+const trackedOrdersNumber = new Schema(
+  {
+    trackedOrdersNumber: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
+  },
+  {
+    timestamps: true,
+  }
+)
+
+const TrackedOrdersNumber = model<ITrackedOrdersNumber>(
+  'TrackedOrdersNumber',
+  trackedOrdersNumber
+)
+
+export { TrackedOrdersNumber }

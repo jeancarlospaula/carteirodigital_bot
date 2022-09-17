@@ -7,14 +7,18 @@ import { tracking } from '../services/correios/tracking'
 import { getLastUpdateMessage } from '../lib/getLastUpdateMessage'
 import { IOrder, IOrderEvents } from '../models/order.model'
 
-import { UserRepository, OrderRepository } from '../repositories'
+import {
+  UserRepository,
+  OrderRepository,
+  TrackedOrdersNumberRepository,
+} from '../repositories'
 
 import { UsersController } from './Users.controller'
 import { IUser } from '../models/user.model'
-import { IOrderSchema } from '../lib/fillNewOrder'
 
 const User = new UserRepository()
 const Order = new OrderRepository()
+const TrackedOrdersNumber = new TrackedOrdersNumberRepository()
 
 interface IStart {
   ctx: TelegrafContext
@@ -133,6 +137,7 @@ class BotController {
         await Order.findByIdAndUpdate(order._id, newOrder)
       } else {
         await Order.insert(newOrder as IOrder)
+        await TrackedOrdersNumber.increment()
       }
 
       const message = getLastUpdateMessage({
