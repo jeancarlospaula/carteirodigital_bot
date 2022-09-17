@@ -1,7 +1,7 @@
 import { Schema, model, Document } from 'mongoose'
 
 export interface ITrackedOrdersNumber extends Document {
-  number: number
+  trackedOrdersNumber: number
 }
 
 const trackedOrdersNumber = new Schema(
