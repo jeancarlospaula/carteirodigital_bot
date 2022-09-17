@@ -14,8 +14,6 @@ class OrdersController {
 
       if (!orders?.length) return console.log('All orders have been delivered')
 
-      console.log(JSON.stringify(orders, null, 2))
-
       await Promise.all(
         orders.map(async (order) => {
           let orderId

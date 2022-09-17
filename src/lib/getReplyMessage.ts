@@ -34,7 +34,7 @@ const getReplyMessage = ({
 
   if (canSendDefaultMessage(event)) return replyMessages.defaultMessage(event)
 
-  console.log(event)
+  console.log('Message not sent. Event: ', JSON.stringify(event, null, 2))
   return replyMessages.error(event.firstName)
 }
 

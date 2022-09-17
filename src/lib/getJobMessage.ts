@@ -22,8 +22,6 @@ const getJobMessage = ({
 }: getMessageDTO): string | undefined => {
   event.packageType = packageType
 
-  console.log('delivered', delivered)
-
   if (delivered) return jobMessages.orderDelivered(event)
 
   if (isOrderWithUpdate(event)) return jobMessages.lastUpdate(event)
@@ -35,6 +33,8 @@ const getJobMessage = ({
   if (isOrderDelivery(event)) return jobMessages.orderDelivery(event)
 
   if (canSendDefaultMessage(event)) return jobMessages.defaultMessage(event)
+
+  console.log('Message not sent. Event: ', JSON.stringify(event, null, 2))
 }
 
 export { getJobMessage }
