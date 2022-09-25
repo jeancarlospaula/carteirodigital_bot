@@ -103,7 +103,7 @@ const error = (firstName: string): string =>
 
 const acceptTerms = (firstName: string): string =>
   `${firstName}, para te enviar as notificações sobre a sua encomenda, precisarei registrar o seu *nome* e os *códigos de rastreio* das suas encomendas.\n\n
-  Ao aceitar, você concorda com a nossa Política de Privacidade e Termos de Uso, disponível em: ${process.env.TERMS_URL}.\n\n
+Ao aceitar, você concorda com a nossa Política de Privacidade e Termos de Uso, disponível em: ${process.env.TERMS_URL}\n\n
 *Você aceita que eu registre essas informações?*`
 
 const rejectedTerms = (firstName: string): string =>
