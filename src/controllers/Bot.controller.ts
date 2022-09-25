@@ -57,7 +57,7 @@ class BotController {
         { text: 'NÃO ACEITO', callback_data: 'rejectedTerms' },
       ]
 
-      return ctx.replyWithHTML(
+      return ctx.replyWithMarkdown(
         replyMessages.acceptTerms(user.firstName as string),
         {
           reply_markup: {
