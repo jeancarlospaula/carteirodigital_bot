@@ -102,7 +102,7 @@ const error = (firstName: string): string =>
   `No momento estou tirando uma folga, ${firstName}. Pode tentar me enviar o código de ratreamento da sua encomenda mais tarde?`
 
 const acceptTerms = (firstName: string): string =>
-  `${firstName}, para te enviar as notificações sobre a sua encomenda, precisarei registrar o seu *nome* e os *códigos de rastreio* das suas encomendas. Ao aceitar, você concorda com a nossa *[Política de Privacidade e Termos de Uso](${process.env.TERMS_URL})*.\n\n
+  `${firstName}, para te enviar as notificações sobre a sua encomenda, precisarei registrar o seu <b>nome</b> e os </b>códigos de rastreio</b> das suas encomendas. Ao aceitar, você concorda com a nossa <a href='${process.env.TERMS_URL}'>Política de Privacidade e Termos de Uso</a>*.\n\n
 *Você aceita que eu registre essas informações?*`
 
 const rejectedTerms = (firstName: string): string =>
