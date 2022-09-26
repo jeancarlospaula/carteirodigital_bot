@@ -1,15 +1,20 @@
 {
   "name": "carteirodigital_bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bot do Telegram para rastrear encomendas dos Correios do Brasil",
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
     "dev": "tsnd --respawn --transpile-only src/index.ts",
     "build": "tsc"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Rastreamento",
+    "Correios",
+    "Bot",
+    "Telegram"
+  ],
+  "author": "Jean Carlos de Paula",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.1",
@@ -30,7 +35,6 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.2.3",
     "eslint-plugin-promise": "^6.0.0",
-    "jest": "^28.1.2",
     "nodemon": "^2.0.18",
     "typescript": "^4.8.2"
   }
