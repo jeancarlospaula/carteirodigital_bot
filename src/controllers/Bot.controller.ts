@@ -1,3 +1,4 @@
+import Redis from 'ioredis'
 import { Chat, Message, TelegrafContext } from 'telegraf-ts'
 import { RastreioEvent } from 'rastreio-correios/dist/interfaces/rastreio'
 
@@ -7,18 +8,15 @@ import { tracking } from '../services/correios/tracking'
 import { getLastUpdateMessage } from '../lib/getLastUpdateMessage'
 import { IOrder, IOrderEvents } from '../models/order.model'
 
-import {
-  UserRepository,
-  OrderRepository,
-  TrackedOrdersNumberRepository,
-} from '../repositories'
+import { UserRepository, OrderRepository } from '../repositories'
 
 import { UsersController } from './Users.controller'
 import { IUser } from '../models/user.model'
 
 const User = new UserRepository()
 const Order = new OrderRepository()
-const TrackedOrdersNumber = new TrackedOrdersNumberRepository()
+
+const redis = new Redis(process.env.REDIS_URL as string)
 
 interface IStart {
   ctx: TelegrafContext
@@ -138,7 +136,7 @@ class BotController {
         await Order.findByIdAndUpdate(order._id, newOrder)
       } else {
         await Order.insert(newOrder as IOrder)
-        await TrackedOrdersNumber.increment()
+        await redis.incr('trackedOrders')
       }
 
       const message = getLastUpdateMessage({
