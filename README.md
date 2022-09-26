@@ -1,6 +1,6 @@
 # Carteiro Digital - Bot 📦
 
-Bot do Telegram para rastrear suas encomendas dos Correios do Brasil.
+Bot do Telegram para rastrear encomendas dos Correios do Brasil.
 
 ## Tecnologias utilizadas
 - Typescript
