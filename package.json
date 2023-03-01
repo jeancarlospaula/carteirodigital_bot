@@ -7,7 +7,7 @@
     "start": "node dist/index.js",
     "dev": "tsnd --respawn --transpile-only src/index.ts",
     "build": "tsc",
-    "test": "jest --coverage"
+    "test": "jest --coverage --runInBand --detectOpenHandles"
   },
   "keywords": [
     "Rastreamento",
