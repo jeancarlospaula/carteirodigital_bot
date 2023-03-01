@@ -22,7 +22,7 @@ const start = async (): Promise<void> => {
 
   bot.launch()
 
-  // Job run at every 5 minutes
+  // Job run at every 1 minutes
   cron.schedule('*/1 * * * *', async () => {
     console.log(`Job started at ${new Date().toISOString()}`)
     await OrdersController.updateAndNotify()
