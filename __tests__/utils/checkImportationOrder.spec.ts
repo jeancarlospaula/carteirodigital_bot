@@ -1,5 +1,5 @@
-import { IEventMessage } from '../../src/lib/getLastUpdateMessage'
 import { checkImportationOrder } from '../../src/utils'
+import { IEventMessage } from '../../src/lib/getLastUpdateMessage'
 
 describe('checkImportationOrder', () => {
   it('should return true if event cityOrigin and stateOrigin is empty and typeOrigin is equal to "País"', () => {

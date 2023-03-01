@@ -1,5 +1,5 @@
+import { canSendDefaultMessage } from '../../src/utils'
 import { IEventMessage } from '../../src/lib/getLastUpdateMessage'
-import { canSendDefaultMessage } from '../../src/utils/canSendDefaultMessage'
 
 describe('canSendDefaultMessage', () => {
   it('should return true if all fields are filled', () => {

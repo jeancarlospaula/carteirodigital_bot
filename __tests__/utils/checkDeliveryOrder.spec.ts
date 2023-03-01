@@ -1,5 +1,5 @@
-import { IEventMessage } from '../../src/lib/getLastUpdateMessage'
 import { checkDeliveryOrder } from '../../src/utils'
+import { IEventMessage } from '../../src/lib/getLastUpdateMessage'
 
 describe('checkDeliveryOrder', () => {
   it('should return true if status contains "Objeto saiu para entrega ao destinatário" and cityDestiny and stateDestiny is empty', () => {

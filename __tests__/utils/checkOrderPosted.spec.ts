@@ -1,5 +1,5 @@
+import { checkOrderPosted } from '../../src/utils'
 import { IEventMessage } from '../../src/lib/getLastUpdateMessage'
-import { checkOrderPosted } from '../../src/utils/checkOrderPosted'
 
 describe('checkOrderPosted', () => {
   it('should return true if status contains "Objeto postado"', () => {
