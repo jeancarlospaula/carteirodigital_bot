@@ -12,7 +12,7 @@ export interface IOrderEvents {
   dateUpdate: string
   timeUpdate: string
   location: IEventAddress
-  destination: IEventAddress
+  destination: IEventAddress | null
 }
 
 export interface IOrder extends Document {
