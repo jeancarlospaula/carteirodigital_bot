@@ -1,0 +1,62 @@
+[
+  {
+    "sucesso": true,
+    "rastreio": "NL167044995BR",
+    "eventos": [
+      {
+        "status": "Objeto postado",
+        "data": "2022-07-19",
+        "hora": "01:34",
+        "origem": "País -  / ",
+        "local": "País -  / "
+      },
+      {
+        "status": "Objeto recebido pelos Correios do Brasil",
+        "data": "2022-07-26",
+        "hora": "08:56",
+        "origem": "Unidade de Logística Integrada - CURITIBA / PR",
+        "local": "Unidade de Logística Integrada - CURITIBA / PR"
+      },
+      {
+        "status": "Fiscalização aduaneira finalizada",
+        "data": "2022-07-28",
+        "hora": "05:54",
+        "origem": "Unidade Operacional - CURITIBA / PR",
+        "local": "Unidade Operacional - CURITIBA / PR"
+      },
+      {
+        "status": "Objeto em trânsito - por favor aguarde",
+        "data": "2022-07-28",
+        "hora": "05:59",
+        "origem": "Unidade de Logística Integrada - CURITIBA / PR",
+        "local": "Unidade de Logística Integrada - CURITIBA / PR",
+        "destino": "Unidade de Tratamento - LONDRINA / PR"
+      },
+      {
+        "status": "Objeto em trânsito - por favor aguarde",
+        "data": "2022-07-29",
+        "hora": "22:42",
+        "origem": "Unidade de Tratamento - LONDRINA / PR",
+        "local": "Unidade de Tratamento - LONDRINA / PR",
+        "destino": "Agência dos Correios - Jardim Alegre / PR"
+      },
+      {
+        "status": "Objeto saiu para entrega ao destinatário",
+        "data": "2022-08-01",
+        "hora": "11:15",
+        "origem": "Agência dos Correios - Jardim Alegre / PR",
+        "local": "Agência dos Correios - Jardim Alegre / PR"
+      },
+      {
+        "status": "Objeto entregue ao destinatário",
+        "data": "2022-08-01",
+        "hora": "15:45",
+        "origem": "Agência dos Correios - Jardim Alegre / PR",
+        "local": "Agência dos Correios - Jardim Alegre / PR"
+      }
+    ],
+    "responseTime": 637,
+    "entregue": true,
+    "type": "Não identificado"
+  }
+]

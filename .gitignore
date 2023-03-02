@@ -1,5 +1,4 @@
 node_modules
 .env*
-orderEvents.json
 dist
 coverage
