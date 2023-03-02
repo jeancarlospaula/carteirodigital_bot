@@ -16,7 +16,10 @@ const updateOrderEvent = async (
   const [trackingData] = await tracking(order.trackingCode)
   if (!trackingData.sucesso) return
 
-  const orderEvents = fillOrderEvents(trackingData.eventos as RastreioEvent[])
+  const orderEvents = fillOrderEvents({
+    events: trackingData.eventos as RastreioEvent[],
+    delivered: trackingData.entregue ? true : false,
+  })
 
   const orderWithoutUpdates =
     orderEvents.length && orderEvents.length <= order.events.length

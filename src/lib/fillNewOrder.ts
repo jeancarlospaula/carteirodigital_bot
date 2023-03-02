@@ -26,7 +26,7 @@ const fillNewOrder = ({
   delivered = false,
   packageType,
 }: IFillNewOrder): IOrderSchema => {
-  const orderEvents = fillOrderEvents(events)
+  const orderEvents = fillOrderEvents({ events, delivered })
 
   const newOrder: IOrderSchema = {
     trackingCode,
