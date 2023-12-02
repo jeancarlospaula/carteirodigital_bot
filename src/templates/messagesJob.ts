@@ -19,8 +19,12 @@ const lastUpdate = ({
 *CÓDIGO*: ${trackingCode}\n\n
 *TIPO*: ${packageType}\n\n
 *STATUS*: ${status}\n\n
-*ORIGEM*: ${cityOrigin.toUpperCase()} - ${stateOrigin.toUpperCase()} (${typeOrigin})\n\n
-*DESTINO*: ${cityDestiny.toUpperCase()} - ${stateDestiny.toUpperCase()} (${typeDestiny})\n\n
+*ORIGEM*: ${cityOrigin.toUpperCase() || ''} - ${
+  stateOrigin.toUpperCase() || ''
+} (${typeOrigin || ''})\n\n
+*DESTINO*: ${cityDestiny.toUpperCase() || ''} - ${
+  stateDestiny.toUpperCase() || ''
+} (${typeDestiny || ''})\n\n
 *DATA DA ATUALIZAÇÃO*: ${moment(dateUpdate).format(
   'DD/MM/YYYY'
 )} - ${timeUpdate}\n\n
